@@ -77,17 +77,19 @@
   }
 }
 
-/* セクションのスタイル */
-#video-section {
-  height: 600px;
-  background-color: #000; /* 動画が読み込まれるまでの背景色 */
+/* 動画セクションのスタイル */
+.video-section {
+  height: 600px; /* 高さを設定 */
+  background-color: #000; /* ビデオが読み込む前の背景色を設定 */
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden; /* オーバーフローを隠す */
 }
 
 /* 動画のスタイル */
-#my-video {
-  max-width: 100%;
-  max-height: 100%;
+video {
+  width: 100%; /* 幅を100%に設定 */
+  height: auto; /* 高さは自動調整 */
+  object-fit: cover; /* アスペクト比を維持しながらビデオを拡大縮小 */
 }
