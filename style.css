@@ -35,8 +35,8 @@ header {
 
 /* ハンバーガーメニューアイコンのスタイル */
 .menu-icon {
-  display: none;
   cursor: pointer;
+  display: none;
 }
 
 .bar {
@@ -44,21 +44,11 @@ header {
   height: 3px;
   background-color: #333;
   margin: 3px 0;
-}
-
-/* チェックボックスのスタイル */
-#menu-toggle {
-  display: none;
-}
-
-/* チェックボックスがチェックされたときにナビゲーションメニューを表示 */
-#menu-toggle:checked + .menu-icon + .nav-menu {
-  display: block;
+  transition: 0.4s;
 }
 
 /* ナビゲーションメニューのスタイル */
 .nav-menu {
-  display: none;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -72,6 +62,7 @@ header {
 
 .nav-menu li {
   margin-right: 20px;
+  display: inline-block;
 }
 
 /* メディアクエリを使用して、ハンバーガーメニューが表示される条件を設定 */
@@ -81,6 +72,8 @@ header {
   }
 
   .nav-menu {
+      display: none;
+      flex-direction: column;
       position: absolute;
       top: 60px; /* ヘッダーの高さに合わせて調整 */
       left: 0;
@@ -91,7 +84,7 @@ header {
   }
 
   .nav-menu.active {
-      display: block;
+      display: flex;
   }
 }
 
