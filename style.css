@@ -85,7 +85,6 @@ h1 {
   top: 50%; /* 上部からの位置を50%に設定 */
   left: 50%; /* 左側からの位置を50%に設定 */
   transform: translate(-50%, -50%); /* 中央寄せ */
-  background-color: rgba(0, 0, 0, 0.7);
   padding: 10px 20px;
   z-index: 3; /* キャッチコピーを最前面に表示 */
 }
@@ -115,6 +114,7 @@ section {
   justify-content: space-between; /* タイルを均等に配置 */
   gap: 20px; /* タイル間のスペースを設定 */
 }
+
 /* 動画タイルのスタイル */
 .video-tile {
     background-color: transparent; /* 背景を透明にする */
