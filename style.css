@@ -76,16 +76,18 @@
       margin: 10px 0; /* メニュー項目間の間隔を設定 */
   }
 }
-/* 動画セクションのスタイル */
-.video-section {
-  height: 600px; /* 高さを設定 */
+
+/* セクションのスタイル */
+#video-section {
+  height: 600px;
+  background-color: #000; /* 動画が読み込まれるまでの背景色 */
   display: flex;
-  justify-content: center; /* コンテンツを水平中央に配置 */
-  align-items: center; /* コンテンツを垂直中央に配置 */
+  justify-content: center;
+  align-items: center;
 }
 
-/* 動画のiframeのスタイル */
-.video-section iframe {
-  max-width: 100%; /* 幅を最大まで拡大 */
-  max-height: 100%; /* 高さを最大まで拡大 */
+/* 動画のスタイル */
+#my-video {
+  max-width: 100%;
+  max-height: 100%;
 }
