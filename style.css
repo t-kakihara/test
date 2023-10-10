@@ -120,11 +120,3 @@ footer {
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* 列数を自動調整 */
   grid-gap: 20px; /* タイル間のスペースを設定 */
 }
-
-/* 動画タイルのスタイル */
-.video-tile {
-  background-color: #f0f0f0;
-  padding: 20px;
-  text-align: center;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-}
