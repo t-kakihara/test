@@ -49,18 +49,19 @@ nav a {
 
 /* ヒーローイメージスタイル */
 #hero {
-    max-width: 100%;
-    background-image: url('your-hero-image.jpg');
-    background-size: cover;
-    background-position: center;
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; /* ビューポートの高さいっぱいに設定 */
-    margin: 0;
-    padding: 0;
-    position: relative;
+  max-width: 100%;
+  background-image: url('your-hero-image.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  display: flex;
+  flex-direction: column; /* キャッチコピーを下に配置 */
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* ビューポートの高さいっぱいに設定 */
+  margin: 0;
+  padding: 0;
+  position: relative;
 }
 
 /* 動画コンテナのスタイル */
@@ -80,10 +81,11 @@ nav a {
 h1 {
   color: #fff;
   font-size: 24px;
-  position: absolute;
-  top: 20px; /* 上部からの位置を調整 */
-  left: 50%;
-  transform: translateX(-50%);
+  position: absolute; /* 絶対位置指定 */
+  top: 50%; /* 上部からの位置を50%に設定 */
+  left: 50%; /* 左側からの位置を50%に設定 */
+  transform: translate(-50%, -50%); /* 中央寄せ */
+  background-color: rgba(0, 0, 0, 0.7);
   padding: 10px 20px;
   z-index: 3; /* キャッチコピーを最前面に表示 */
 }
