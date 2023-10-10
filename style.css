@@ -49,19 +49,21 @@ nav a {
 
 /* ヒーローイメージスタイル */
 #hero {
-  max-width: 100%; /* 横幅を最大まで設定 */
-  background-image: url('your-hero-image.jpg');
-  background-size: cover;
-  background-position: center;
-  color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh; /* ビューポートの高さいっぱいに設定 */
-  margin: 0; /* マージンを削除 */
-  padding: 0; /* パディングを削除 */
-  position: relative; /* 相対位置指定 */
+    max-width: 100%; /* 横幅を最大まで設定 */
+    background-image: url('your-hero-image.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    display: flex;
+    flex-direction: column; /* キャッチコピーを下に配置 */
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* ビューポートの高さいっぱいに設定 */
+    margin: 0; /* マージンを削除 */
+    padding: 0; /* パディングを削除 */
+    position: relative; /* 相対位置指定 */
 }
+
 
 /* 動画コンテナのスタイル */
 .video-container {
@@ -79,8 +81,16 @@ nav a {
     padding: 0; /* パディングを削除 */
 }
 
-.hero-content {
-  text-align: center;
+/* キャッチコピーのスタイル */
+#hero h1 {
+  color: #fff; /* キャッチコピーの文字色 */
+  font-size: 24px; /* キャッチコピーの文字サイズ */
+  position: absolute; /* 絶対位置指定 */
+  top: 20px; /* 上からの位置を調整 */
+  left: 50%; /* 横方向の位置を中央に */
+  transform: translateX(-50%); /* 中央寄せ */
+  background-color: rgba(0, 0, 0, 0.7); /* キャッチコピーの背景色 */
+  padding: 10px 20px; /* パディングを追加 */
 }
 
 /* セクションの共通スタイル */
