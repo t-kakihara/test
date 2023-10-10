@@ -139,10 +139,15 @@ footer {
 
 /* 動画タイルのスタイル */
 .video-tile {
-  /* 背景を透明にする */
-  background-color: transparent;
-  /* その他のスタイルを設定 */
+  background-color: transparent; /* 背景を透明にする */
   padding: 20px;
   text-align: center;
+  box-shadow: none; /* シャドウを削除 */
   overflow: hidden;
+}
+
+/* 動画タイトルのスタイル */
+.video-tile h3 {
+  color: gray; /* タイトルの文字色をグレーに設定 */
+  margin-top: 10px; /* タイトルと動画の間に余白を追加 */
 }
