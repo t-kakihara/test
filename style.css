@@ -33,10 +33,9 @@ header {
   color: #fff;
 }
 
-/* ハンバーガーメニューのアイコンスタイル */
+/* ハンバーガーメニューアイコンのスタイル */
 .menu-icon {
   display: none;
-  flex-direction: column;
   cursor: pointer;
 }
 
@@ -45,29 +44,30 @@ header {
   height: 3px;
   background-color: #333;
   margin: 3px 0;
-  transition: 0.4s;
 }
 
-/* メニューが開いたときのハンバーガーメニューのアイコンスタイル */
-.menu-opened .bar:nth-child(1) {
-  transform: rotate(-45deg) translate(-5px, 6px);
+/* チェックボックスのスタイル */
+#menu-toggle {
+  display: none;
 }
 
-.menu-opened .bar:nth-child(2) {
-  opacity: 0;
-}
-
-.menu-opened .bar:nth-child(3) {
-  transform: rotate(45deg) translate(-5px, -6px);
+/* チェックボックスがチェックされたときにナビゲーションメニューを表示 */
+#menu-toggle:checked + .menu-icon + .nav-menu {
+  display: block;
 }
 
 /* ナビゲーションメニューのスタイル */
+.nav-menu {
+  display: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
 .nav-menu ul {
   list-style: none;
   padding: 0;
   margin: 0;
-  display: flex;
-  align-items: center;
 }
 
 .nav-menu li {
@@ -77,22 +77,21 @@ header {
 /* メディアクエリを使用して、ハンバーガーメニューが表示される条件を設定 */
 @media (max-width: 768px) {
   .menu-icon {
-      display: flex;
+      display: block;
   }
 
   .nav-menu {
-      display: none;
-      flex-direction: column;
       position: absolute;
       top: 60px; /* ヘッダーの高さに合わせて調整 */
       left: 0;
       background-color: #fff;
       padding: 20px;
       border: 1px solid #ddd;
+      width: 100%; /* 画面幅いっぱいに表示 */
   }
 
   .nav-menu.active {
-      display: flex;
+      display: block;
   }
 }
 
