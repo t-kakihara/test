@@ -57,13 +57,14 @@ nav a {
 /* 動画コンテナのスタイル */
 .video-container {
   position: relative;
-  width: 100%;
+  max-width: 100%; /* 幅を最大まで設定 */
+  overflow: hidden; /* 親要素からはみ出た部分を非表示に */
 }
 
 /* 動画のスタイル */
 .video-container video {
-  width: 100%;
-  height: auto; /* サイズを可変にするために auto に設定 */
+  width: 100%; /* 動画を親要素に合わせて表示 */
+  height: auto; /* 高さを自動調整 */
 }
 
 .hero-content {
