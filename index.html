@@ -1,71 +1,182 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ポートフォリオ</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <!-- ヘッダー -->
-    <header>
-        <div class="logo">Your Logo</div>
-        <nav>
-            <ul>
-                <li><a href="#hero">Home</a></li>
-                <li><a href="#movie">Movie</a></li>
-                <li><a href="#graphic-design">Graphic Design</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+/* リセットCSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    <!-- ヒーローイメージ -->
-    <section id="hero">
-        <div class="hero-content">
-            <h1>Your Catchphrase</h1>
-            <div class="video-container">
-                <video controls>
-                    <source src="video/0619_portfolio_25MB.mp4" type="video/mp4">
-                    <!-- ビデオのサポートされていないブラウザ向けの代替テキスト -->
-                    ブラウザがビデオをサポートしていません。
-                </video>
-            </div>
-        </div>
-    </section>
+/* 全体のスタイル */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+}
 
-    <!-- 動画セクション -->
-    <section id="movie">
-        <h2>Movie</h2>
-        <!-- 動画タイルをラップするコンテナ -->
-        <div class="video-tile-container">
-        <!-- 各動画タイル -->
-        <div class="video-tile">
-            <h3>動画タイトル 1</h3>
-            <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/9NAw7hddscQ?si=hFvr0-KqF-09cAn9&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        </div>
-    
-        <div class="video-tile">
-            <h3>動画タイトル 2</h3>
-            <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/9NAw7hddscQ?si=hFvr0-KqF-09cAn9&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        </div>
-    </section>
+/* ヘッダースタイル */
+header {
+  background-color: transparent; /* 背景を透明にする */
+  position: absolute; /* 絶対位置指定 */
+  top: 0; /* 画面上部に配置 */
+  left: 0;
+  right: 0;
+  z-index: 2; /* ヘッダーをヒーローイメージの上に配置 */
+  height: 64px; /* ヘッダーの高さを設定 */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px; /* パディングを追加 */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 影を追加 */
+}
 
-    <!-- グラフィックデザインセクション -->
-    <section id="graphic-design">
-        <h2>Graphic Design</h2>
-        <!-- 各作品タイルをここに追加 -->
-    </section>
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
 
-    <!-- フッター -->
-    <footer>
-        <div class="footer-content">
-            <div class="icon">Your Icon</div>
-            <div class="contact-info">
-                <p>Email: your@email.com</p>
-                <p>About Me: Your Introduction</p>
-            </div>
-        </div>
-    </footer>
-</body>
-</html>
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav li {
+  margin-right: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+
+/* ヒーローイメージスタイル */
+#hero {
+  max-width: 100%; /* 横幅を最大まで設定 */
+  background-image: url('your-hero-image.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* ビューポートの高さいっぱいに設定 */
+  margin: 0; /* マージンを削除 */
+  padding: 0; /* パディングを削除 */
+  position: relative; /* 相対位置指定 */
+}
+
+/* 動画コンテナのスタイル */
+.video-container {
+    position: relative;
+    width: 100%; /* 横幅を100%に設定 */
+    padding-top: 56.25%; /* 16:9アスペクト比の動画に合わせた高さを設定 */
+    overflow: hidden; /* 親要素からはみ出た部分を非表示に */
+}
+
+/* 動画のスタイル */
+.video-container video {
+    width: 100%; /* 動画を親要素に合わせて表示 */
+    height: 100%; /* 高さを100%に設定 */
+    margin: 0; /* 余白を削除 */
+    padding: 0; /* パディングを削除 */
+}
+
+.hero-content {
+  text-align: center;
+}
+
+/* セクションの共通スタイル */
+section {
+  padding: 40px;
+}
+
+/* 動画セクションのスタイル */
+#movie {
+  padding-top: 100vh; /* ヒーローイメージの高さ分だけセクションを下にずらす */
+}
+
+/* 動画タイルコンテナをフレキシブルなグリッドに設定 */
+.video-tile-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* タイルを均等に配置 */
+  gap: 20px; /* タイル間のスペースを設定 */
+}
+
+/* 動画タイルのスタイル */
+.video-tile {
+  background-color: transparent; /* 背景を透明にする */
+  text-align: center;
+  box-shadow: none; /* シャドウを削除 */
+  overflow: hidden;
+  position: relative; /* 相対位置指定 */
+}
+
+/* 動画のスタイル */
+.video-tile iframe {
+  width: 100%; /* 動画を親要素に合わせて表示 */
+  height: auto; /* 高さを自動調整 */
+  margin: 0; /* 余白を削除 */
+  padding: 0; /* パディングを削除 */
+}
+
+/* 動画タイトルのスタイル */
+.video-tile h3 {
+  color: gray; /* タイトルの文字色をグレーに設定 */
+  position: absolute; /* 絶対位置指定 */
+  bottom: 0; /* 下側に配置 */
+  left: 0; /* 左側に配置 */
+  width: 100%; /* 幅を100%に設定 */
+  background-color: rgba(0, 0, 0, 0.7); /* 背景色を半透明の黒に設定 */
+  margin: 0; /* マージンを0に設定 */
+  padding: 5px; /* パディングを追加して文字を少し小さく表示 */
+}
+
+/* フッタースタイル */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.icon {
+  font-size: 48px;
+}
+
+/* レスポンシブデザイン */
+@media screen and (max-width: 768px) {
+  header {
+      height: auto;
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .logo {
+      margin-bottom: 10px;
+  }
+
+  nav {
+      margin-top: 10px;
+  }
+
+  nav ul {
+      flex-direction: column;
+  }
+
+  nav li {
+      margin-right: 0;
+      margin-bottom: 10px;
+  }
+
+  #hero {
+      height: auto;
+      padding: 40px 0;
+  }
+
+  .hero-content {
+      text-align: center;
+  }
+
+  section {
+      padding: 20px;
+  }
+}
