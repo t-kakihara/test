@@ -44,26 +44,27 @@ nav a {
 
 /* ヒーローイメージスタイル */
 #hero {
-  background-image: url('your-hero-image.jpg');
-  background-size: cover;
-  background-position: center;
-  color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    max-width: 100%; /* 横幅を最大まで設定 */
+    background-image: url('your-hero-image.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* 動画コンテナのスタイル */
 .video-container {
-  position: relative;
-  max-width: 100%; /* 幅を最大まで設定 */
-  overflow: hidden; /* 親要素からはみ出た部分を非表示に */
+    position: relative;
+    max-width: 100%; /* 横幅を最大まで設定 */
+    overflow: hidden; /* 親要素からはみ出た部分を非表示に */
 }
 
 /* 動画のスタイル */
 .video-container video {
-  width: 100%; /* 動画を親要素に合わせて表示 */
-  height: auto; /* 高さを自動調整 */
+    width: 100%; /* 動画を親要素に合わせて表示 */
+    height: auto; /* 高さを自動調整 */
 }
 
 .hero-content {
