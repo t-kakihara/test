@@ -79,16 +79,13 @@
 /* 動画セクションのスタイル */
 .video-section {
   height: 600px; /* 高さを設定 */
-  overflow: hidden; /* 不要なスクロールバーを非表示 */
-  position: relative; /* 動画を絶対位置で配置 */
+  display: flex;
+  justify-content: center; /* コンテンツを水平中央に配置 */
+  align-items: center; /* コンテンツを垂直中央に配置 */
 }
 
-/* 動画要素のスタイル */
-.video-section video {
-  width: 100%; /* 幅を100%に設定してコンテナに合わせる */
-  height: 100%; /* 高さを100%に設定してコンテナに合わせる */
-  object-fit: cover; /* アスペクト比を保ちつつコンテナに合わせる */
-  position: absolute; /* 絶対位置で配置 */
-  top: 0;
-  left: 0;
+/* 動画のiframeのスタイル */
+.video-section iframe {
+  max-width: 100%; /* 幅を最大まで拡大 */
+  max-height: 100%; /* 高さを最大まで拡大 */
 }
