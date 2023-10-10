@@ -51,7 +51,6 @@ nav a {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 600px; /* 最小の高さを設定 */
 }
 
 /* 動画コンテナのスタイル */
