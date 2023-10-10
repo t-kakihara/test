@@ -6,19 +6,19 @@
     <title>ポートフォリオ</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
 
+<body>
 <!-- ヘッダー -->
 <header>
-    <input type="checkbox" id="menu-toggle">
-    <label for="menu-toggle" class="menu-icon">
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-    </label>
     <div class="logo">PORTFOLIO</div>
+    <!-- ハンバーガーメニューアイコン -->
+    <div class="menu-icon" id="menu-icon">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
     <!-- ナビゲーションメニュー -->
-    <nav class="nav-menu">
+    <nav class="nav-menu" id="nav-menu">
         <ul>
             <li><a href="#movie">Movie</a></li>
             <li><a href="#graphic-design">Graphic Design</a></li>
@@ -75,5 +75,16 @@
             </div>
         </div>
     </footer>
+    <script>
+        // ハンバーガーメニューアイコンの要素を取得
+        const menuIcon = document.getElementById("menu-icon");
+        // ナビゲーションメニューの要素を取得
+        const navMenu = document.getElementById("nav-menu");
+        // ハンバーガーメニューアイコンがクリックされたときの処理
+        menuIcon.addEventListener("click", function () {
+            // ナビゲーションメニューを開閉する
+            navMenu.classList.toggle("active");
+        });
+    </script>
 </body>
 </html>
