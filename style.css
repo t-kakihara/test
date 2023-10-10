@@ -137,10 +137,11 @@ footer {
 
 /* 動画タイルのスタイル */
 .video-tile {
-  flex: 0 0 calc(33.33% - 20px); /* 3つ横に並べるための幅設定（20pxはタイル間のスペース） */
-  background-color: #f0f0f0;
+  /* 背景を透明にする */
+  background-color: transparent;
+  /* その他のスタイルを設定 */
   padding: 20px;
   text-align: center;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-  overflow: hidden; /* タイル内の動画がはみ出さないように制御 */
+  overflow: hidden;
 }
