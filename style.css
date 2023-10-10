@@ -85,6 +85,7 @@
   justify-content: center;
   align-items: center;
   overflow: hidden; /* オーバーフローを隠す */
+  margin-top: 80px; /* ヘッダーの高さに合わせてマージンを設定 */
 }
 
 /* 動画のスタイル */
