@@ -11,47 +11,26 @@ body {
   background-color: #fff;
 }
 
-/* ヘッダースタイル */
+/* ヘッダーのスタイル */
 header {
-  background: none; /* 背景を透明にする */
-  box-shadow: none; /* 影を削除 */
-  position: absolute; /* 絶対位置指定 */
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 2; /* ヘッダーを最前面に表示 */
-  height: 64px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 20px;
+  background-color: transparent; /* 背景色を透明に設定 */
+  color: white; /* テキストカラーを設定 */
+  padding: 15px 0; /* 上下の余白を追加 */
+  position: absolute; /* ヘッダーを絶対位置に設定 */
+  top: 0; /* ヘッダーを画面上部に配置 */
+  left: 0; /* ヘッダーを左端に配置 */
+  right: 0; /* ヘッダーを右端に配置 */
 }
 
-.logo {
-  font-size: 40px;
-  font-weight: bold;
-  color: #fff;
-}
-
-/* ハンバーガーメニューアイコンのスタイル */
+/* ハンバーガーメニューのスタイル */
 .menu-icon {
+  display: none; /* メニューアイコンを非表示 */
   cursor: pointer;
-  display: none;
-}
-
-.bar {
-  width: 30px;
-  height: 3px;
-  background-color: #333;
-  margin: 3px 0;
-  transition: 0.4s;
 }
 
 /* ナビゲーションメニューのスタイル */
 .nav-menu {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+  display: block; /* ナビゲーションメニューは常に表示 */
 }
 
 .nav-menu ul {
@@ -61,30 +40,36 @@ header {
 }
 
 .nav-menu li {
-  margin-right: 20px;
-  display: inline-block;
+  margin: 10px 0;
 }
 
-/* メディアクエリを使用して、ハンバーガーメニューが表示される条件を設定 */
-@media (max-width: 768px) {
+.nav-menu a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+/* メディアクエリ: 768px以下の画面幅で表示を切り替える */
+@media screen and (max-width: 768px) {
+  /* ハンバーガーメニューが表示される */
   .menu-icon {
       display: block;
   }
 
+  /* ナビゲーションメニューが非表示 */
   .nav-menu {
       display: none;
-      flex-direction: column;
       position: absolute;
-      top: 60px; /* ヘッダーの高さに合わせて調整 */
+      top: 64px;
       left: 0;
+      right: 0;
       background-color: #fff;
-      padding: 20px;
-      border: 1px solid #ddd;
-      width: 100%; /* 画面幅いっぱいに表示 */
+      text-align: center;
   }
 
-  .nav-menu.active {
-      display: flex;
+  /* ハンバーガーメニューがクリックされたときに表示 */
+  #menu-toggle:checked + .menu-icon + .nav-menu {
+      display: block;
   }
 }
 
@@ -159,16 +144,21 @@ section {
 /* 動画タイルのスタイル */
 .video-tile {
     background-color: transparent; /* 背景を透明にする */
-    padding: 20px;
+    padding: 30px;
     text-align: center;
     box-shadow: none; /* シャドウを削除 */
     overflow: hidden;
+    width: 100%;
+    max-width: 500px;
+    display: block;
+    margin: auto;
+    aspect-ratio: 16 / 10;
 }
 
 /* 動画のスタイル */
 .video-tile iframe {
-  width: 100%; /* 動画を親要素に合わせて表示 */
-  height: auto; /* 高さを自動調整 */
+  width: 100%; /* 幅を親要素に合わせる */
+  height: 100%; /* 高さを自動調整 */
 }
 
 /* 動画タイトルのスタイル */
