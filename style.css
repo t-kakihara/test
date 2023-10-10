@@ -126,9 +126,20 @@ footer {
   }
 }
 
-/* 動画タイルコンテナをグリッドとして設定 */
+/* 動画タイルコンテナをフレキシブルなグリッドに設定 */
 .video-tile-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* 列数を自動調整 */
-  grid-gap: 20px; /* タイル間のスペースを設定 */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* タイルを均等に配置 */
+  gap: 20px; /* タイル間のスペースを設定 */
+}
+
+/* 動画タイルのスタイル */
+.video-tile {
+  flex: 0 0 calc(33.33% - 20px); /* 3つ横に並べるための幅設定（20pxはタイル間のスペース） */
+  background-color: #f0f0f0;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  overflow: hidden; /* タイル内の動画がはみ出さないように制御 */
 }
