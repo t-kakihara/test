@@ -52,12 +52,16 @@ nav a {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100vh; /* ビューポートの高さいっぱいに設定 */
+    margin: 0; /* マージンを削除 */
+    padding: 0; /* パディングを削除 */
 }
 
 /* 動画コンテナのスタイル */
 .video-container {
     position: relative;
-    max-width: 100%; /* 横幅を最大まで設定 */
+    width: 100%; /* 横幅を100%に設定 */
+    padding-top: 56.25%; /* 16:9アスペクト比の動画に合わせた高さを設定 */
     overflow: hidden; /* 親要素からはみ出た部分を非表示に */
 }
 
@@ -66,7 +70,7 @@ nav a {
     width: 100%; /* 動画を親要素に合わせて表示 */
     height: 100%; /* 高さを100%に設定 */
     margin: 0; /* 余白を削除 */
-    padding: 0; /* 余白を削除 */
+    padding: 0; /* パディングを削除 */
 }
 
 .hero-content {
