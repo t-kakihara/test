@@ -32,10 +32,14 @@
         </header>
     <!-- メインビジュアル -->
     <div class="video-section">
-        <video src="video/0619_portfolio_25MB.mp4" controls autoplay loop muted>
+        <video id="portfolioVideo" src="video/0619_portfolio_25MB.mp4" controls autoplay loop muted>
             <!-- ビデオのサポートされていないブラウザ向けの代替テキスト -->
             ブラウザがビデオをサポートしていません。
         </video>
+        <script>
+            const video = document.getElementById("portfolioVideo");
+            video.controls = false; // コントロールバーを非表示にする
+        </script>
     </div>
     
     <!-- 作品 -->
