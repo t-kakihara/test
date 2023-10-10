@@ -14,7 +14,6 @@ body {
 /* ヘッダースタイル */
 header {
   background-color: transparent; /* 背景を透明にする */
-  position: fixed; /* ヘッダーを固定 */
   top: 0; /* 上部に固定 */
   left: 0;
   right: 0;
@@ -24,7 +23,6 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 0 20px; /* パディングを追加 */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 影を追加 */
 }
 
 .logo {
@@ -60,6 +58,10 @@ nav a {
   height: 100vh; /* ビューポートの高さいっぱいに設定 */
   margin: 0; /* マージンを削除 */
   padding: 0; /* パディングを削除 */
+  position: absolute; /* 絶対位置指定 */
+  top: 0; /* 画面上部に配置 */
+  left: 0;
+  right: 0;
 }
 
 /* 動画コンテナのスタイル */
