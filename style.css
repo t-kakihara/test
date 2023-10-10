@@ -44,14 +44,14 @@ nav a {
 
 /* ヒーローイメージスタイル */
 #hero {
-  height: 600px;
-  background-image: url('your-hero-image.jpg');
-  background-size: cover;
-  background-position: center;
-  color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    background-image: url('your-hero-image.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 600px; /* 最小の高さを設定 */
 }
 
 .hero-content {
