@@ -1,59 +1,54 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <title>サイトタイトル</title>
-  <meta name="description" content="サイトの説明文">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ポートフォリオ</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- ヘッダー -->
-        <header>
-            <!-- ナビゲーションバー -->
-            <nav class="navbar">
-                <!-- ロゴまたはサイト名 -->
-                <div class="logo">
-                    <a href="#">ロゴ</a>
-                </div>
-                
-                <!-- ハンバーガーメニュー（768px以下で表示） -->
-                <div class="hamburger-menu">
-                    <div class="hamburger-icon"></div>
-                </div>
-                
-                <!-- グローバルナビゲーション（768px以上で表示） -->
-                <ul class="nav-links">
-                    <li><a href="#">ホーム</a></li>
-                    <li><a href="#">ポートフォリオ</a></li>
-                    <li><a href="#">お問い合わせ</a></li>
-                </ul>
-            </nav>
-        </header>
-    <!-- メインビジュアル -->
-    <div class="video-section">
-        <video id="portfolioVideo" src="video/0619_portfolio_25MB.mp4" controls autoplay loop muted>
-            <!-- ビデオのサポートされていないブラウザ向けの代替テキスト -->
-            ブラウザがビデオをサポートしていません。
-        </video>
-        <script>
-            const video = document.getElementById("portfolioVideo");
-            video.controls = false; // コントロールバーを非表示にする
-        </script>
-    </div>
-    
-    <!-- 作品 -->
-    <section id="portfolio">
-        <h2>作品</h2>
-        <!-- ここに作品のリストやギャラリーを追加できます -->
+    <header>
+        <div class="logo">Your Logo</div>
+        <nav>
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#movie">Movie</a></li>
+                <li><a href="#graphic-design">Graphic Design</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ヒーローイメージ -->
+    <section id="hero">
+        <div class="hero-content">
+            <h1>Your Catchphrase</h1>
+            <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/9NAw7hddscQ?si=hFvr0-KqF-09cAn9&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <!-- 動画セクション -->
+    <section id="movie">
+        <h2>Movie</h2>
+        <!-- 各動画タイルをここに追加 -->
+    </section>
+
+    <!-- グラフィックデザインセクション -->
+    <section id="graphic-design">
+        <h2>Graphic Design</h2>
+        <!-- 各作品タイルをここに追加 -->
     </section>
 
     <!-- フッター -->
     <footer>
-        <p>&copy; 2023 あなたの名前</p>
+        <div class="footer-content">
+            <div class="icon">Your Icon</div>
+            <div class="contact-info">
+                <p>Email: your@email.com</p>
+                <p>About Me: Your Introduction</p>
+            </div>
+        </div>
     </footer>
-
-    <!-- ここにJavaScriptファイルのリンクを追加することができます -->
-    <script src="script.js"></script>
 </body>
 </html>
