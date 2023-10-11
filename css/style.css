@@ -305,12 +305,6 @@ video {
   margin-bottom: 40px;
 }
 
-.movies-item iframe {
-  max-width: 100%;
-  width: 100%;
-  height: auto;
-  aspect-ratio: 16 / 9; /* 動画のアスペクト比に合わせて調整 */
-}
 
 .movies-body {
   font-size: 8px;
@@ -511,10 +505,13 @@ video {
   .movies-item {
     display: block;
   }
- 　.movies-item iframe {
-    width: 100%;
-    height: auto;
-  }
+  
+.movies-item iframe {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9; /* 動画のアスペクト比に合わせて調整 */
+}
 
   .movies-image-wrapper {
     max-width: 100%;
