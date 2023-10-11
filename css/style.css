@@ -139,17 +139,17 @@ li {
  ヒーローイメージスタイル
 ---------------------------------*/
 .video-container {
-  display: flex; /* コンテナ内の要素を中央に配置するために Flexbox を使用 */
-  align-items: center; /* 垂直方向（上下）に要素を中央に配置 */
-  justify-content: center; /* 水平方向（左右）に要素を中央に配置 */
-  height: 100vh; /* ビューポートの高さいっぱいに設定 */
-  margin: 0; /* マージンをゼロに設定 */
-  padding: 0; /* パディングをゼロに設定 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
 }
 
 video {
-  max-width: 100%; /* 動画を親要素に合わせる */
-  height: auto; /* 高さを自動調整 */
+  max-width: 100%;
+  height: auto;
 }
 
 /*--------------------------------
