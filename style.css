@@ -170,7 +170,6 @@ section {
     box-shadow: none; /* シャドウを削除 */
     width: 100%;
     max-width: 560px;
-    height: auto;
     display: block;
     margin: auto;
     aspect-ratio: 16 / 9;
