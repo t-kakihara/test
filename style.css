@@ -11,66 +11,74 @@ body {
   background-color: #fff;
 }
 
-/* ヘッダーのスタイル */
+/* ヘッダーの初期スタイル */
 header {
-  background-color: transparent; /* 背景色を透明に設定 */
-  color: white; /* テキストカラーを設定 */
-  padding: 15px 0; /* 上下の余白を追加 */
-  position: absolute; /* ヘッダーを絶対位置に設定 */
-  top: 0; /* ヘッダーを画面上部に配置 */
-  left: 0; /* ヘッダーを左端に配置 */
-  right: 0; /* ヘッダーを右端に配置 */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: transparent;
+  transition: background-color 0.3s;
+  z-index: 1000;
 }
 
-/* ハンバーガーメニューのスタイル */
-.menu-icon {
-  display: none; /* メニューアイコンを非表示 */
-  cursor: pointer;
+/* スクロール後のヘッダーのスタイル */
+header.scrolled {
+  background-color: #333; /* 背景色を変更 */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* 影を追加 */
 }
 
 /* ナビゲーションメニューのスタイル */
-.nav-menu {
-  display: block; /* ナビゲーションメニューは常に表示 */
-}
-
 .nav-menu ul {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 20px 0;;
+  display: flex; /* 項目を横並びに配置 */
+  justify-content: center; /* 水平方向に中央揃え */
 }
 
 .nav-menu li {
-  margin: 10px 0;
+  margin: 0 20px;
+  position: relative;
 }
 
 .nav-menu a {
+  /* 既存のスタイル */
   text-decoration: none;
-  color: #333;
+  font-family: "Times New Roman", serif; /* 明朝体フォント指定 */
+  font-size: 20px; /* フォントサイズを大きく */
   font-weight: bold;
+  background-image: linear-gradient(to bottom, transparent 0%, transparent 100%);
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  color: white;
+  transition: color 0.3s, background-position 0.3s;
+  display: flex;
+  align-items: center; /* 垂直方向の中央揃え */
+  justify-content: center; /* 水平方向の中央揃え */
 }
 
-/* メディアクエリ: 768px以下の画面幅で表示を切り替える */
-@media screen and (max-width: 768px) {
-  /* ハンバーガーメニューが表示される */
-  .menu-icon {
-      display: block;
-  }
+.nav-menu a::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px; /* 下線の高さ */
+  background-color: #333; /* 下線の色 */
+  bottom: 0;
+  left: 0;
+  transform: scaleX(0); /* 初期状態では下線を非表示 */
+  transform-origin: right;
+  transition: transform 0.3s; /* ホバー時のアニメーション設定 */
+}
 
-  /* ナビゲーションメニューが非表示 */
-  .nav-menu {
-      display: none;
-      position: absolute;
-      top: 64px;
-      left: 0;
-      right: 0;
-      background-color: #fff;
-      text-align: center;
-  }
+.nav-menu a:hover {
+  color: #333; /* ホバー時の文字色 */
+  background-position: 0 0; /* グラデーションを上に移動 */
+}
 
-  /* ハンバーガーメニューがクリックされたときに表示 */
-  #menu-toggle:checked + .menu-icon + .nav-menu {
-      display: block;
-  }
+.nav-menu a:hover::before {
+  transform: scaleX(1); /* ホバー時に下線を表示 */
+  transform-origin: left;
 }
 
 /* ヒーローイメージスタイル */
@@ -113,6 +121,25 @@ header {
 /* スクロール時にヒーローイメージを非表示にするスタイル */
 .scroll-hide {
   display: none;
+}
+
+/* キャッチコピーのスタイル */
+.catchphrase {
+  position: absolute;
+  top: 50%; /* 垂直中央に配置 */
+  left: 50%; /* 水平中央に配置 */
+  transform: translate(-50%, -45%); /* 中央配置のための変換 */
+  z-index: 1; /* 最前面に表示 */
+  font-size: 60px; /* フォントサイズ */
+  letter-spacing: 10px; /* 文字間の調整 */
+  color: white; /* テキスト色を白に設定 */
+  animation: slideIn 1s forwards; /* 下からスライドインアニメーション */
+}
+
+@keyframes slideIn {
+  to {
+      bottom: 0; /* 下からの最終位置 */
+  }
 }
 
 /* タイトルのスタイル */
