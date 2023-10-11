@@ -24,8 +24,13 @@ header {
 
 /* スクロール後のヘッダーのスタイル */
 header.scrolled {
-  background-color: #333; /* 背景色を変更 */
+  background-color: #ffffff; /* 背景色を変更 */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* 影を追加 */
+}
+
+/* スクロール後のナビゲーションメニューのスタイル */
+header.scrolled ul li a {
+  color: #000;
 }
 
 /* ナビゲーションメニューのスタイル */
@@ -35,15 +40,15 @@ header.scrolled {
   margin: 20px 0;;
   display: flex; /* 項目を横並びに配置 */
   justify-content: center; /* 水平方向に中央揃え */
+  align-items: center;
 }
 
 .nav-menu li {
-  margin: 0 20px;
+  margin: 0 40px;
   position: relative;
 }
 
 .nav-menu a {
-  /* 既存のスタイル */
   text-decoration: none;
   font-family: "Times New Roman", serif; /* 明朝体フォント指定 */
   font-size: 20px; /* フォントサイズを大きく */
@@ -71,6 +76,7 @@ header.scrolled {
   transition: transform 0.3s; /* ホバー時のアニメーション設定 */
 }
 
+/* ナビゲーションメニューのホバースタイル */
 .nav-menu a:hover {
   color: #333; /* ホバー時の文字色 */
   background-position: 0 0; /* グラデーションを上に移動 */
@@ -126,19 +132,21 @@ header.scrolled {
 /* キャッチコピーのスタイル */
 .catchphrase {
   position: absolute;
-  top: 50%; /* 垂直中央に配置 */
-  left: 50%; /* 水平中央に配置 */
-  transform: translate(-50%, -45%); /* 中央配置のための変換 */
+  bottom: 0; /* 下からの初期位置 */
+  left: 30px; /* 左からの位置を調整 */
   z-index: 1; /* 最前面に表示 */
-  font-size: 60px; /* フォントサイズ */
-  letter-spacing: 10px; /* 文字間の調整 */
-  color: white; /* テキスト色を白に設定 */
+  font-size: 60px; /* フォントサイズを大きく */
+  letter-spacing: 4px; /* 文字間の調整 */
+  color: rgb(255, 255, 255); /* テキスト色を白に設定 */
   animation: slideIn 1s forwards; /* 下からスライドインアニメーション */
 }
 
 @keyframes slideIn {
+  from {
+    bottom: -100px; /* 下からの初期位置 */
+  }
   to {
-      bottom: 0; /* 下からの最終位置 */
+    bottom: 100px; /* 下からの最終位置 */
   }
 }
 
@@ -210,25 +218,27 @@ footer {
 @media screen and (max-width: 768px) {
   header {
       height: auto;
-      flex-direction: column;
-      align-items: flex-start;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
   }
 
-  .logo {
-      margin-bottom: 10px;
+  .nav-menu {
+    /* ナビゲーションメニューを横並びに調整 */
+    display: flex;
   }
 
-  nav {
-      margin-top: 10px;
+  .nav-menu ul {
+    flex-direction: row; /* メニュー項目を横に並べる */
   }
 
-  nav ul {
-      flex-direction: column;
+  .nav-menu li {
+    margin: 0 20px;
   }
 
-  nav li {
-      margin-right: 0;
-      margin-bottom: 10px;
+  .nav-menu a {
+    font-size: 16px; /* フォントサイズを調整 */
+    white-space: nowrap; /* テキストがはみ出ても折り返さないように */
   }
 
   #hero {
