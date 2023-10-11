@@ -145,10 +145,6 @@ li {
   z-index: -1;
 }
 
-.hero video::-webkit-media-controls {
-  display: none !important;
-}
-
 /*--------------------------------
  グローバルナビ
 ---------------------------------*/
