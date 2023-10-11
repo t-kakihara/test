@@ -7,8 +7,12 @@
 
 /* 全体のスタイル */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #fff;
+  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic, "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  font-size: 15px;
+  line-height: 1.8;
+  letter-spacing: 0.8px;
+  word-break: break-all;
+  color: #333;
 }
 
 /* ヘッダーの初期スタイル */
@@ -129,32 +133,14 @@ header.scrolled ul li a {
   display: none;
 }
 
-/* キャッチコピーのスタイル */
-.catchphrase {
-  position: absolute;
-  bottom: 0; /* 下からの初期位置 */
-  left: 30px; /* 左からの位置を調整 */
-  z-index: 1; /* 最前面に表示 */
-  font-size: 60px; /* フォントサイズを大きく */
-  letter-spacing: 4px; /* 文字間の調整 */
-  color: rgb(255, 255, 255); /* テキスト色を白に設定 */
-  animation: slideIn 1s forwards; /* 下からスライドインアニメーション */
-}
-
-@keyframes slideIn {
-  from {
-    bottom: -100px; /* 下からの初期位置 */
-  }
-  to {
-    bottom: 100px; /* 下からの最終位置 */
-  }
-}
-
 /* タイトルのスタイル */
 h2 {
-  color: #000000;
-  font-size: 36px; /* タイトルの文字サイズを調整 */
-  margin: 20px; /* タイトルの余白を設定 */
+  color: #2b2b2b; /* グレーの色を設定 */
+  font-family: "Times New Roman", serif; /* 明朝体フォント指定 */
+  font-size: 36px; /* タイトルの文字サイズを統一 */
+  font-weight: bold;
+  text-align: center; /* タイトルのテキストを中央揃えに統一 */
+  margin: 20px 0; /* タイトルとコンテンツの間に統一された余白を追加 */
 }
 
 /* セクションの共通スタイル */
@@ -182,12 +168,12 @@ section {
     padding: 30px;
     text-align: center;
     box-shadow: none; /* シャドウを削除 */
-    overflow: hidden;
     width: 100%;
-    max-width: 500px;
+    max-width: 560px;
+    height: auto;
     display: block;
     margin: auto;
-    aspect-ratio: 16 / 10;
+    aspect-ratio: 16 / 9;
 }
 
 /* 動画のスタイル */
@@ -198,20 +184,145 @@ section {
 
 /* 動画タイトルのスタイル */
 .video-tile h3 {
-  color: gray; /* タイトルの文字色をグレーに設定 */
-  margin-top: 10px; /* タイトルと動画の間に余白を追加 */
+  background: linear-gradient(to right, #ff3366, #33ccff); /* グラデーションの色 */
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 13px; /* 文字サイズを調整 */
+  margin: auto; /* タイトルと動画の間に余白を追加 */
+  padding: 5px;
 }
 
-/* フッタースタイル */
-footer {
-  background-color: #333;
+.custom-text {
+  font-size: 10px; /* 年月の文字サイズを小さく設定 */
+  font-weight: lighter; /* フォントを細字に設定 */
+  color: #888; /* 年月のテキスト色をグレーに設定 */
+}
+
+/* グラフィックデザインセクションのスタイル */
+#graphic-design {
+  text-align: center; /* テキストを中央揃えにする */
+  background-color: #f0f0f0; /* 薄いグレーの背景色を設定 */
+  padding: 10px 0; /* 上下に余白を追加 */
+}
+
+/* 画像タイルコンテナをフレキシブルなグリッドに設定 */
+.design-tile-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; /* タイル間のスペースを設定 */
+  justify-content: flex-start; /* 余白を均等に分配せず、左揃えにする */
+}
+
+/* 画像タイルのスタイル */
+.design-tile {
+  background-color: transparent; /* 背景を透明にする */
+  padding: 20px;
+  text-align: center;
+  box-shadow: none; /* シャドウを削除 */
+  width: calc(33.33% - 20px); /* 幅を3列に分割（20pxの余白を右側に設定） */
+}
+
+/* 画像のスタイル */
+.design-tile img {
+  width: 100%; /* 幅を100%に設定 */
+  min-width: 200px;
+  height: 100%; /* 高さを100%に設定 */
+  padding: 20px;
+}
+
+/* 画像ホバー時のスタイル */
+.design-tile img:hover {
+  opacity: 0.7; /* ホバー時に半透明にする（0.7は透明度の値） */
+  transition: opacity 0.3s; /* トランジションを追加して滑らかな変化を設定 */
+}
+
+/* モーダルウィンドウのスタイル */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  padding-top: 50px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+/* モーダルウィンドウ内のコンテンツのスタイル */
+.modal-content {
+  margin: auto;
+  display: block;
+  max-width: 80%;
+  max-height: 80%;
+}
+
+/* 閉じるボタンのスタイル */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
   color: #fff;
+  cursor: pointer;
+}
+
+/* Aboutセクションのスタイル */
+#about {
+  text-align: center; /* テキストを中央揃えにする */
+  background-color: #ffffff; /* 背景色を設定 */
+  padding: 20px 0; /* 上下の余白を調整 */
+}
+
+/* Aboutセクションのコンテンツスタイル */
+.about-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* プロフィール写真のスタイル */
+.profile-image img {
+  width: 150px; /* プロフィール写真の幅を設定 */
+  height: 150px; /* プロフィール写真の高さを設定 */
+  border-radius: 50%; /* 丸い形状にするための角丸 */
+  object-fit: cover; /* 写真を切り抜いて表示 */
+  margin-bottom: 5px; /* プロフィール写真とテキストの間に余白を追加 */
+}
+
+/* 名前のスタイル */
+.profile-info h3 {
+  font-size: 20px; /* 名前の文字サイズを大きく設定 */
+  margin-bottom: 3px; /* 名前と役職情報の間に余白を追加 */
+  font-weight: bold;
+}
+
+/* 役職情報のスタイル */
+.profile-info p {
+  color: #888; /* 年月のテキスト色をグレーに設定 */
+  font-size: 5px; /* 役職情報の文字サイズを小さく設定 */
+  margin: 10px 0; /* 段落間の余白を調整 */
+}
+
+/* Contact情報のスタイル */
+.profile-info p:last-child {
+  color: #000000; /* 年月のテキスト色をグレーに設定 */
+  font-size: 15px; /* 文字サイズを設定 */
+  font-weight: bold; /* Contact情報を太字にする */
+}
+
+/* フッターのスタイル */
+footer {
+  background-color: #333; /* フッターの背景色を設定 */
+  color: #fff; /* テキストの色を白に設定 */
   padding: 20px;
   text-align: center;
 }
 
-.icon {
-  font-size: 48px;
+/* コピーライトテキストのスタイル */
+.copyright-text {
+  font-size: 10px; /* フォントサイズを小さく設定 */
 }
 
 /* レスポンシブデザイン */
