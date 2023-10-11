@@ -10,14 +10,11 @@
     
 <!-- ヘッダー -->
 <header>
-    <input type="checkbox" id="menu-toggle">
-    <label for="menu-toggle" class="menu-icon">&#9776;</label>
     <nav class="nav-menu">
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#movie">Movie</a></li>
+            <li><a href="#graphic-design">Graphic Design</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 </header>
@@ -25,8 +22,7 @@
     <!-- ヒーローイメージ -->
     <section id="hero">
         <div class="hero-content">
-            <!-- h1タグを削除 -->
-            <!--　<h1 class="catchphrase">PORTFOLIO</h1>　-->
+            <h1 class="catchphrase">PORTFOLIO</h1>
             <div class="video-container">
                 <video autoplay loop muted playsinlin>
                     <source src="video/0619_portfolio_25MB.mp4" type="video/mp4">
@@ -70,5 +66,15 @@
             </div>
         </div>
     </footer>
+    <script>
+        window.addEventListener("scroll", function() {
+            const header = document.querySelector("header");
+            if (window.scrollY > 0) {
+                header.classList.add("scrolled");
+            } else {
+                header.classList.remove("scrolled");
+            }
+        });
+    </script>    
 </body>
 </html>
